@@ -2,7 +2,7 @@
   <div class="p-card">
     <div class="p-d-flex p-jc-center p-ai-center">
       <div class="p-mr-2">
-        <i class="pi pi-home"></i>
+        <img :src="company.image" alt="Company Logo" class="company-logo">
       </div>
       <div>
         <h5>{{ company.name }}</h5>
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-//import buy from 'src/model/buy.js'
+
 export default {
   props: {
     company: Object,
@@ -32,14 +32,19 @@ export default {
 
 <style scoped>
 .p-card {
-  width: 400px;
+  width: 300px; /* Adjust as needed */
   margin: 1rem;
   border: 2px solid #D9D052;
   background-color: #D3F2CE;
+  padding: 1rem; /* Add padding for the icon area */
 }
 .p-button-success{
   background-color: #ffffff;
   border: 1px solid #000000;
+}
+.company-logo {
+  width: 90px;
+  height: 90px;
 }
 </style>
 
