@@ -1,3 +1,23 @@
+<script>
+export default {
+  props: {
+    company: Object,
+  },
+  methods:{
+    buy(){
+      //this.$router.push('/purchase');
+      // Open a new window with the URL of purchase form.
+      window.open('', '_blank');
+      const buy = new buy(this.company);
+      buy.buy();
+
+      //redirect the user to subscription form.
+      //this.$router.push({name: './subscription-form'});
+    },
+  },
+};
+</script>
+
 <template>
   <div class="p-card">
     <div class="p-d-flex p-jc-center p-ai-center">
@@ -12,23 +32,6 @@
     <button class="p-button-success" @click="buy">Buy</button>
   </div>
 </template>
-
-<script>
-
-export default {
-  props: {
-    company: Object,
-  },
-  methods:{
-    buy(){
-      // Open a new window with the URL of purchase form.
-      window.open('', '_blank');
-      const buy = new buy(this.company);
-      buy.buy();
-    },
-  },
-};
-</script>
 
 <style scoped>
 .p-card {
