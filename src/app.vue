@@ -1,5 +1,6 @@
 <script>
-import CompanyCardComponent from "./components/company-card.component.vue";
+import CompanyCardComponent from "./planing/components/company-card.component.vue";
+import SubscriptionFormComponent from "./planing/components/subscription-form.component.vue";
 import FooterComponent from "./public/components/footer.component.vue";
 import SmallCompany from './assets/empresa-pequeña.png';
 import MediumCompany from './assets/empresa-mediana.png';
@@ -9,6 +10,7 @@ export default {
   components: {
     CompanyCardComponent,
     FooterComponent,
+    SubscriptionFormComponent
   },
   data() {
     return {
@@ -23,6 +25,10 @@ export default {
               'para empresas cuyo número de empleados supera los 200.'
           , image: BigCompany}
       ],
+      items: [
+        {label: 'company-card', to:'/company-card'},
+        {label: 'subscription-form', to: '/subscription-form'},
+      ]
     };
   },
 };
@@ -30,9 +36,12 @@ export default {
 
 <template>
   <div id="app">
-    <div style="display: flex; flex-direction: row; justify-content: space-around;">
-      <company-card-component v-for="company in companies" :key="company.id" :company="company" />
-    </div>
+    <main>
+      <router-view></router-view>
+      <div style="display: flex; flex-direction: row; justify-content: space-around;">
+        <company-card-component v-for="company in companies" :key="company.id" :company="company" />
+      </div>
+    </main>
     <footer-component></footer-component>
   </div>
 </template>

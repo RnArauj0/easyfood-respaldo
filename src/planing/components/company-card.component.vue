@@ -5,14 +5,9 @@ export default {
   },
   methods:{
     buy(){
-      //this.$router.push('/purchase');
-      // Open a new window with the URL of purchase form.
-      window.open('', '_blank');
-      const buy = new buy(this.company);
-      buy.buy();
 
-      //redirect the user to subscription form.
-      //this.$router.push({name: './subscription-form'});
+      this.$router.push('./Subscription-form');
+
     },
   },
 };
