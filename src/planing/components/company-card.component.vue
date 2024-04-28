@@ -30,11 +30,11 @@ export default {
 
 <style scoped>
 .p-card {
-  width: 300px; /* Adjust as needed */
+  width: 300px;
   margin: 1rem;
   border: 2px solid #D9D052;
   background-color: #D3F2CE;
-  padding: 1rem; /* Add padding for the icon area */
+  padding: 1rem;
 }
 .p-button-success{
   background-color: #ffffff;
